@@ -1,5 +1,5 @@
 <?php
-    print_r($_POST);
+    //print_r($_POST);
     include './connection/conexion.php';
 
     $nombre = $_POST['nombre'];
@@ -13,9 +13,5 @@
 
     $insert = $conexion ->query($query);
 
-    if($insert){
-        echo "Insercion exitosa";
-    }else{
-        echo "ERROR";
-    }
+    header('Location: ./index.php');
 ?>
