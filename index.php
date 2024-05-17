@@ -16,14 +16,18 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+
+        <!--CSS-->
+        <link rel="stylesheet" href="css/interfaz.css" />
     </head>
 
     <body>
 
         <main>
+            
             <h1 class="text-center fw-bold">Mis Clientes</h1>
-            <div class="container p-2">
-                <div class="row justify-content-center align-items-center g-2" style="background-color: rgb(228, 99, 183);">
+            <div class="container p-3">
+                <div class="row justify-content-center align-items-center g-2" style="background-color: rgba(233, 120, 245, 0.722);">
                 <div class="col-3 p-3">
                     <h4 class="fw-bolder">Formulario</h4>
                     <form action="./insert.php" method="post">
@@ -65,7 +69,7 @@
                 <div class="col-9 p-4">
                     
                     <h4 class="fw-bolder">Tabla</h4>
-                    <table class="table table-striped table-secondary">
+                    <table class="table table-striped table-ligth">
                         <thead>
                             <tr>
                                 <th>Nombre Completo</th>
@@ -76,14 +80,30 @@
                             </tr>
                         </thead> 
                         <tbody>
-                            <td>Adrian</td>
-                            <td>2005-01-27</td>
-                            <td>adrina032@gmail.com</td>
-                            <td>182-232-223</td>
+                            <?php
+                            include './connection/conexion.php';
+                            $query = "SELECT * FROM clientes";
+                            $resultado = $conexion -> query($query);
+
+                            if($resultado->num_rows > 0){
+                                while($fila = $resultado -> fetch_assoc()){
+                                    echo "
+                        <tr>
+                            <td>{$fila['nombre']} {$fila['ap_paterno']} {$fila['ap_materno']}</td>
+                            <td>{$fila['fecha_nacimiento']}</td>
+                            <td>{$fila['correo_electronico']}</td>
+                            <td>{$fila['telefono']}</td>
                             <td>
-                                <button class="btn btn-success">Editar</button>
-                                <button class="btn btn-danger">Eliminar</button>
+                                <button class='btn btn-success'>Editar</button>
+                                <button class='btn btn-danger'>Eliminar</button>
                             </td>
+                        </tr>";
+                                }
+                            };
+                            ?>
+                        
+                            
+                            
                         </tbody>
                     </table>
                 </div>

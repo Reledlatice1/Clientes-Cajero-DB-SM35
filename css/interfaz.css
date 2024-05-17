@@ -1,19 +1,9 @@
-body{
-    background: #7F7FD5;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-#descripcion{
-    resize: none;
-}
-
-.centrado{
-    text-align: center;
-    vertical-align: middle;
-}
-
-.bg-white{
-    background-color: #ffff;
+body {
+    background-image: url('https://image.slidesdocs.com/responsive-images/background/banner-featuring-3d-illustration-of-digital-devices-laptop-mobile-phone-and-tablet-pc-on-purple-wall-shelf-powerpoint-background_ed6b3f53e7__960_540.jpg');
+    /*background-image: url('/img/fondo.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 100vh;
 }
