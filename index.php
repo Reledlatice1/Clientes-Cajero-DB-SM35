@@ -27,7 +27,7 @@
             
             <h1 class="text-center fw-bold">Mis Clientes</h1>
             <div class="container p-3">
-                <div class="row justify-content-center align-items-center g-2" style="background-color: rgba(233, 120, 245, 0.722);">
+                <div class="row g-2" style="background-color: rgba(233, 120, 245, 0.722);">
                 <div class="col-3 p-3">
                     <h4 class="fw-bolder">Formulario</h4>
                     <form action="./insert.php" method="post">
@@ -94,7 +94,7 @@
                             <td>{$fila['correo_electronico']}</td>
                             <td>{$fila['telefono']}</td>
                             <td>
-                                <a class='btn btn-success' data-bs-toggle='modal' data-bs-target='#exampleModal'>Editar</a>
+                                <a href='edit.php?id_cliente={$fila['id_cliente']}' class='btn btn-success'>Editar</a>
                                 <a href='delete.php?id_cliente={$fila['id_cliente']}' class='btn btn-danger'>Eliminar</a>
                             </td>
                         </tr>";
@@ -111,56 +111,11 @@
             </div>
 
             <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Actualizar Cliente</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form action="" method="">
-                        <div class="mb-3">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="nombre">
-                        </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Apellido paterno</label>
-                            <input type="text" class="form-control" name="ap_paterno">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Apellido Materno</label>
-                            <input type="text" class="form-control" name="ap_materno">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Fecha nacimiento</label>
-                            <input type="date" class="form-control" name="fecha_nacimiento">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Correo Electronico</label>
-                            <input type="email" class="form-control" name="correo_electronico">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Telefono</label>
-                            <input type="tel" class="form-control" name="telefono">
-                        </div>
-                    
-                </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a href="update.php"  type="button" class="btn btn-success">Save changes</a>
-      </div>
-    </div>
-  </div>
-</div>
             
         </main>
+
+        <script src="javascript/java.js"></script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

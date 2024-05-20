@@ -21,3 +21,8 @@ CREATE TABLE correspondencia(
     FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
 )
 
+/*Creacion de indices de busqueda*/
+CREATE INDEX idx_correo_electronico ON clientes(correo_electronico);
+CREATE INDEX idx_telefono ON clientes(telefono);
+
+CREATE INDEX idx_id_cliente ON correspondencia(id_cliente);
