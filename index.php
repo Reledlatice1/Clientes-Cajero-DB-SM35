@@ -56,7 +56,11 @@
                     </div>
                     <div class="col-9 p-4">
                         <h4 class="fw-bolder">Tabla</h4>
-                        <div class="table-responsive" style="max-height: 550px; overflow-y: auto;">
+                        <div class="py-3">
+                              <input type="text" class="form-control" name="" placeholder="Buscar">
+                        </div>
+                      
+                        <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
                             <table class="table table-striped table-ligth table-fixed">
                                 <thead>
                                     <tr>
