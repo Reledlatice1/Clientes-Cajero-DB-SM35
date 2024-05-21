@@ -31,7 +31,7 @@ $fila = $resultado->fetch_assoc();
             crossorigin="anonymous"
         />
 
-        <link rel="stylesheet" href="css/interfaz.css"/>
+        <link rel="stylesheet" href="css/edit.css"/>
     </head>
 
     <body>
@@ -43,7 +43,7 @@ $fila = $resultado->fetch_assoc();
         <h1 class="text-center fw-bold" >Editar Usuario</h1>
 
         <div class="container p-3">
-                <div class="row justify-content-center g-2 form-container" style="background-color: rgba(233, 120, 245, 0.722);" >
+                <div class="row justify-content-center g-2 form-container" style="background-color: #ffffff9a; " >
                 <div class="col-4 p-3">
                     <h4 class="fw-bolder text-center">Formulario</h4>
                     <form action="update.php" method="post">
