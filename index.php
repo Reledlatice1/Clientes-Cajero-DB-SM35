@@ -61,7 +61,7 @@
                         </div>
                       
                         <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
-                            <table class="table table-striped table-ligth table-fixed">
+                            <table class="table table-striped table-ligth">
                                 <thead>
                                     <tr>
                                         <th>Nombre Completo</th>
