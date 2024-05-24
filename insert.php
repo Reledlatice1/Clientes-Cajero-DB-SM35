@@ -9,8 +9,8 @@
     $correo_electronico = $_POST['correo_electronico'];
     $telefono = $_POST['telefono'];
 
-    $query = "INSERT INTO clientes (nombre, ap_paterno, ap_materno, fecha_nacimiento, correo_electronico, telefono) VALUES ('$nombre', '$ap_paterno', '$ap_materno', '$fecha_nacimiento', '$correo_electronico', '$telefono')";
-
+    //$query = "INSERT INTO clientes (nombre, ap_paterno, ap_materno, fecha_nacimiento, correo_electronico, telefono) VALUES ('$nombre', '$ap_paterno', '$ap_materno', '$fecha_nacimiento', '$correo_electronico', '$telefono')";
+    $query = "call tb_clientes.sp_insertar_cliente('$nombre', '$ap_paterno', '$ap_materno', '$fecha_nacimiento', '$correo_electronico', '$telefono')";
     $insert = $conexion ->query($query);
 
     header('Location: ./index.php');

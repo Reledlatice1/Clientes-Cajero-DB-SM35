@@ -24,27 +24,27 @@
                         <form action="./insert.php" method="post">
                             <div class="mb-3">
                                 <label class="form-label">Nombre</label>
-                                <input type="text" class="form-control" name="nombre">
+                                <input type="text" class="form-control" name="nombre" require>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Apellido paterno</label>
-                                <input type="text" class="form-control" name="ap_paterno">
+                                <input type="text" class="form-control" name="ap_paterno" require>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" name="ap_materno">
+                                <input type="text" class="form-control" name="ap_materno" require>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Fecha nacimiento</label>
-                                <input type="date" class="form-control" name="fecha_nacimiento">
+                                <input type="date" class="form-control" name="fecha_nacimiento" require>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Correo Electronico</label>
-                                <input type="email" class="form-control" name="correo_electronico">
+                                <input type="email" class="form-control" name="correo_electronico" require>
                             </div>
 
                             <div class="mb-3">
@@ -74,7 +74,7 @@
                                 <tbody>
                                     <?php
                                     include './connection/conexion.php';
-                                    $query = "SELECT * FROM clientes";
+                                    $query = "call tb_clientes.sp_mostrar_cliente()";
                                     $resultado = $conexion -> query($query);
 
                                     if($resultado->num_rows > 0){

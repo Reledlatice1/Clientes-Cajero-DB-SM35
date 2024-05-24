@@ -4,7 +4,7 @@
 $id_cliente = $_GET['id_cliente'];
 include './connection/conexion.php';
 
-$query = "SELECT * FROM clientes WHERE id_cliente = '$id_cliente'";
+$query = "call tb_clientes.sp_cliente_por_id($id_cliente)";
 $resultado = $conexion -> query($query);
 
 $fila = $resultado->fetch_assoc();
