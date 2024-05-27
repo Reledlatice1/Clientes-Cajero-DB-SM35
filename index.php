@@ -11,7 +11,6 @@
 
         <!--CSS-->
         <link rel="stylesheet" href="css/interfaz.css" />
-        <link rel="stylesheet" href="css/Styles.css" />
     </head>
 
     <body>
@@ -81,7 +80,7 @@
                                         while($fila = $resultado -> fetch_assoc()){
                                             echo "
                                     <tr>
-                                        <td>{$fila['nombre']} {$fila['ap_paterno']} {$fila['ap_materno']}</td>
+                                        <td> <a href='profile.php?id_cliente={$fila['id_cliente']}'>{$fila['nombre']} {$fila['ap_paterno']} {$fila['ap_materno']}</a></td>
                                         <td>{$fila['fecha_nacimiento']}</td>
                                         <td>{$fila['correo_electronico']}</td>
                                         <td>{$fila['telefono']}</td>
