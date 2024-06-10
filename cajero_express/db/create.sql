@@ -19,7 +19,7 @@ CREATE TABLE tb_tarjeta(
 
 CREATE TABLE tb_tipo_movimiento(
     id_tipo_movimiento INT PRIMARY KEY AUTO_INCREMENT,
-    id_tipo_movimiento VARCHAR(20)
+    tipo_movimiento VARCHAR(20)
 );
 
 CREATE TABLE movimientos(

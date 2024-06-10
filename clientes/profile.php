@@ -135,7 +135,7 @@ $fila = $resultado->fetch_assoc();
                     <tbody>
                         <?php 
                         include './connection/conexion.php';
-                        $query2 = "SELECT*FROM correspondencia WHERE id_cliente = $id_cliente";
+                        $query2 = "call tb_clientes.sp_correspondencia_por_cliente($id_cliente)";
                         $resultado2 = $conexion -> query($query2);
 
                         if($resultado2->num_rows > 0){

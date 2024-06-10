@@ -4,7 +4,7 @@
 $id_correspondencia= $_GET['id_correspondencia'];
 include './connection/conexion.php';
 
-$query = "SELECT*FROM correspondencia WHERE id_correspondencia = $id_correspondencia";
+$query = "call tb_clientes.sp_correspondencia_por_id($id_correspondencia) ";
 $resultado = $conexion -> query($query);
 
 $fila = $resultado->fetch_assoc();
