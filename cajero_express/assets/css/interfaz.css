@@ -1,13 +1,4 @@
-body {
-    background-image: url('https://c.wallhere.com/photos/88/0d/simple_blue-219836.jpg!d');
-    /*background-image: url('/img/fondo.jpg');*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    height: 100vh;
 
-}
 
 html, body {
             height: 100%;

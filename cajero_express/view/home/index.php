@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location: ../../index.html");
+}
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -58,11 +67,11 @@ html, body {
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
                     <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
                 </svg>
-                    <a class="navbar-brand text-light" href="#">| Cajero Express | BVVA</a>
+                    <a class="navbar-brand text-light" href="#">| Cajero Express | BBVA</a>
                     <div class="collapse navbar-collapse" id="collapsibleNavId">
                         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="btn btn-danger " href="../../index.php" aria-current="page"
+                                <a class="btn btn-danger " href="../../connection/logut.php" aria-current="page"
                                     >Cerrar Sesion
                                     <span class="visually-hidden">(current)</span></a
                                 >
@@ -76,18 +85,21 @@ html, body {
         </header>
         <main>
             <h1 class="fw-bold text-center p-5">Bienvenido Usuario</h1>
-            <div class="container vstack gap-3 col-md-5 mx-auto p-4 shadow" style="background-color: rgba(0, 102, 255, 0.205);">
+            <div class="container vstack gap-3 col-md-5 mx-auto p-4 shadow" style="background-color: rgba(0, 102, 255, 0.255);">
                 <h2 class="fw-semibold text-center">Que accion desea realizar</h2>
 
             
-                <a class="btn btn-primary m-3" href="../saldo/index.php">Consultar saldo  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
-  <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-  <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"/>
-</svg></a>
-                <a class="btn btn-secondary m-3" href="../retiro/index.php">Retirar dinero <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
-  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
-  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-</svg>
+                <a class="btn btn-primary m-3" href="../saldo/index.php">Consultar saldo  
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
+                        <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                        <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"/>
+                    </svg>
+                </a>
+                <a class="btn btn-secondary m-3" href="../retiro/index.php">Retirar dinero 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                    </svg>
                 </a>
             </div>
         </main>

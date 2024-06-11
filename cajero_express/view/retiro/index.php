@@ -69,14 +69,14 @@ html, body {
             <h1 class="fw-bold text-center p-4">Retirar Dinero</h1>
             
             <form class="container vstack gap-3 col-md-5 mx-auto p-4 shadow" style="background-color: rgba(0, 102, 255, 0.405);">
-            <h3 class="text-center p-1" style="font-size: 50px;">$90000</h3>
+            <h3 class="text-center p-1" style="font-size: 50px;">$90000.00 MXM</h3>
                 <h2 class="text-center">Saldo actual</h2>
-                <div class="contenedor" style=" display: flex; justify-content: center; margin-top: 10px;">
-            <button class="btn btn-success" style="margin-left: 10px">$50</button>
-            <button class="btn btn-success" style="margin-left: 10px">$100</button>
-            <button class="btn btn-success" style="margin-left: 10px">$200</button>
-            <button class="btn btn-success" style="margin-left: 10px">$500</button>
-        </div>
+                    <div class="contenedor" style=" display: flex; justify-content: center; margin-top: 10px;">
+                        <button class="btn btn-success" style="margin-left: 10px">$50</button>
+                        <button class="btn btn-success" style="margin-left: 10px">$100</button>
+                        <button class="btn btn-success" style="margin-left: 10px">$200</button>
+                        <button class="btn btn-success" style="margin-left: 10px">$500</button>
+                    </div>
 
                 <label class="form-label">Ingrese el monto a retirar</label>
                     <input type="number" class="form-control mb-4">
@@ -84,8 +84,7 @@ html, body {
                 <a class="btn btn-danger p-2" href="../home/index.php">Cancelar Operacion</a>
             </form>
         </main>
-     
-        
+
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
