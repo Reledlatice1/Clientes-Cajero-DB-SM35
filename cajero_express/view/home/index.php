@@ -5,6 +5,12 @@ session_start();
 if(!isset($_SESSION['id'])){
     header("Location: ../../index.html");
 }
+
+$nombre = $_SESSION['nombre'];
+$ap_paterno = $_SESSION['ap_paterno'];
+$ap_materno = $_SESSION['ap_materno'];
+
+$nombre_completo = $nombre . " " . $ap_paterno . " " . $ap_materno;
 ?>
 
 <!doctype html>
@@ -84,7 +90,7 @@ html, body {
             
         </header>
         <main>
-            <h1 class="fw-bold text-center p-5">Bienvenido Usuario</h1>
+            <h1 class="fw-bold text-center p-5">Bienvenio <?= $nombre_completo;  ?></h1>
             <div class="container vstack gap-3 col-md-5 mx-auto p-4 shadow" style="background-color: rgba(0, 102, 255, 0.255);">
                 <h2 class="fw-semibold text-center">Que accion desea realizar</h2>
 

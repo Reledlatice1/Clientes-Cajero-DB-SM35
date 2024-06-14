@@ -1,3 +1,14 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location: ../../index.html");
+}
+
+$saldo = $_SESSION['saldo'];
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -83,7 +94,7 @@ html, body {
                                 <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"/>
                             </svg>
                     </div>
-            <h3 class="text-center P-4" style="font-size: 50px;">$90000.00 MXM</h3>
+            <h3 class="text-center P-4" style="font-size: 50px;"><?= $saldo; ?> MXM</h3>
                 <h2 class="text-center P-4">Saldo actual</h2>
                 
 
