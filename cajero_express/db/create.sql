@@ -8,6 +8,23 @@ CREATE TABLE tb_clientes(
     ap_materno VARCHAR(25)
 );
 
+CREATE tb_log_clientes(
+    id_log_cliente INT PRIMARY KEY AUTO_INCREMENT,
+    accion VARCHAR(20),
+    id_clientet INT,
+    nombre_completo VARCHAR(250),
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tb_log_tarjetas(
+    id_log_tarjetas INT PRIMARY KEY AUTO_INCREMENT,
+    accion VARCHAR(20),
+    id_tarjeta INT,
+    n_tarjeta VARCHAR(20),
+    saldo DECIMAL(20, 2),
+    id_cliente INT NOT NULL
+)
+
 CREATE TABLE tb_tarjeta(
     id_tarjeta INT PRIMARY KEY AUTO_INCREMENT,
     n_tarjeta VARCHAR(16),
