@@ -49,6 +49,9 @@ CREATE TABLE movimientos(
     FOREIGN KEY (id_tipo_movimiento) REFERENCES tb_tipo_movimiento(id_tipo_movimiento)
 );
 
+
+ALTER TABLE tb_clientes ADD COLUMN estado ENUM('Activo', 'Inactivo') DEFAULT 'Inactivo';
+
 /*
 <---formularios--->
 DATE 1990-09-25 

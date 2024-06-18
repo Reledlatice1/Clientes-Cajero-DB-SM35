@@ -1,6 +1,13 @@
 <?php
 session_start();
-session_destroy();
+
+require_once './conexion.php';
+
+if(isset($_SESSION['id'])){
+    $sql = "UPDATE tb_clientes SET estado = 'Inactivo' WHERE id_cliente = " .$_SESSION['id_cliente'];
+    $conexion->query($sql);
+    session_destroy();
+}
 
 header("Location: ../index.html");
 ?>
