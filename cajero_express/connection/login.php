@@ -10,8 +10,9 @@ if(isset($_POST['n_tarjeta']) && isset($_POST['nip'])){
             FROM tb_tarjeta INNER JOIN tb_clientes ON
             tb_tarjeta.id_cliente = tb_clientes.id_cliente
             WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";
+    //$sql = "call sp_buscar_cliente_tarjeta('$n_tarjeta','$nip')";
     $result = $conexion->query($sql);
-    if($result->num_rows > 0){
+    if($result->num_rows > 0){ 
         $row = $result->fetch_assoc();
         if($row['estado'] == 'Activo'){
             $_SESSION['error'] = 'El usuario ya inicio sesion';
@@ -19,7 +20,10 @@ if(isset($_POST['n_tarjeta']) && isset($_POST['nip'])){
             exit();
         }
 
-        $sql = "UPDATE tb_clientes SET estado = 'Activo' WHERE id_cliente = " .$row['id_cliente'];
+        //$sql = "UPDATE tb_clientes SET estado = 'Activo' WHERE id_cliente = " .$row['id_cliente'];
+        $id_cliente = $row['id_cliente'];
+        $sql = "call cajero.sp_actualizarEstadoCliente('$id_cliente')";
+        
         $conexion->query($sql);
 
         $_SESSION['id'] = $row['id_tarjeta'];
