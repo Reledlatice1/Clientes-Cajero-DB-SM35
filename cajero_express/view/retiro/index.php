@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location: ../../index.html");
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -61,7 +70,7 @@
     <main>
         <h1 class="fw-bold text-center p-4">Retirar Dinero</h1>
 
-        <form class="container vstack gap-3 col-md-5 mx-auto p-4 shadow" style="background-color: rgba(0, 102, 255, 0.405);">
+        <form class="container vstack gap-3 col-md-5 mx-auto p-4 shadow"  action="update.php" method="post" style="background-color: rgba(0, 102, 255, 0.405);">
             <h3 class="text-center p-1" style="font-size: 50px;">$90000.00 MXM</h3>
             <h2 class="text-center">Saldo actual</h2>
             <div class="contenedor" style=" display: flex; justify-content: center; margin-top: 10px;">
@@ -72,8 +81,8 @@
             </div>
 
             <label class="form-label">Ingrese el monto a retirar</label>
-            <input type="number" class="form-control mb-4">
-            <a class="btn btn-primary">Retirar dinero</a>
+            <input type="number" name="monto" class="form-control mb-4">
+            <button class="btn btn-primary" type="submit">Retirar dinero</button>
             <a class="btn btn-danger p-2" href="../home/index.php">Cancelar Operacion</a>
         </form>
     </main>
