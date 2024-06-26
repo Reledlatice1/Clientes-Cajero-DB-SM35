@@ -6,11 +6,11 @@ if(isset($_POST['n_tarjeta']) && isset($_POST['nip'])){
     require_once './conexion.php';
     $n_tarjeta = $_POST['n_tarjeta'];
     $nip = $_POST['nip'];
-    $sql = "SELECT id_tarjeta, n_tarjeta, nip, saldo,tb_tarjeta.id_cliente, nombre, ap_paterno, ap_materno
+    /*$sql = "SELECT id_tarjeta, n_tarjeta, nip, saldo,tb_tarjeta.id_cliente, nombre, ap_paterno, ap_materno
             FROM tb_tarjeta INNER JOIN tb_clientes ON
             tb_tarjeta.id_cliente = tb_clientes.id_cliente
-            WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";
-    //$sql = "call sp_buscar_cliente_tarjeta('$n_tarjeta','$nip')";
+            WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";*/
+    $sql = "call sp_buscar_cliente_tarjeta('$n_tarjeta','$nip')";
     $result = $conexion->query($sql);
     if($result->num_rows > 0){ 
         $row = $result->fetch_assoc();

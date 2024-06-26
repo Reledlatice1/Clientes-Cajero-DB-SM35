@@ -8,8 +8,30 @@ if (!isset($_SESSION['id'])) {
 }
 
 
-
+include '../../connection/conexion.php';
+$id_tarjeta = $_SESSION['id'];
 $saldo = $_SESSION['saldo'];
+
+// Obtener el id del tipo de movimiento "consulta"
+/*$sql = "SELECT id_tipo_movimiento FROM tb_tipo_movimiento WHERE tipo = 'consulta'";
+$result = $conexion->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $consulta_id = $row['id_tipo_movimiento'];
+
+    // Insertar el movimiento de consulta de saldo
+    $sql = "INSERT INTO movimientos (monto, id_tarjeta, id_tipo_movimiento) VALUES (0, ?, ?)";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("ii", $id_tarjeta, $consulta_id);
+    $stmt->execute();
+    $stmt->close();
+} else {
+    echo "Error: No se encontró el tipo de movimiento 'consulta'.";
+}
+
+$conexion->close();*/
+
 ?>
 
 <!doctype html>
@@ -88,7 +110,7 @@ $saldo = $_SESSION['saldo'];
                     <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
                 </svg>
             </div>
-            <h3 class="text-center P-4" style="font-size: 50px;"><?= $saldo; ?> MXM</h3>
+            <h3 class="text-center P-4" style="font-size: 50px;"><?= $saldo; ?> $MXM</h3>
             <h2 class="text-center P-4">Saldo actual</h2>
 
 

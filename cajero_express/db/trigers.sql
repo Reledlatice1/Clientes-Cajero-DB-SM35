@@ -60,3 +60,5 @@ INSERT INTO tb_log_clientes (accion, id_cliente, nombre_completo)
 VALUES('LOGOUT', OLD.id_cliente, CONCAT(OLD.nombre, '', OLD.ap_paterno, '', OLD.ap_materno));
 END IF;
     END//
+
+

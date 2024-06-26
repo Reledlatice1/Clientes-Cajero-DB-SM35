@@ -71,8 +71,7 @@ if(!isset($_SESSION['id'])){
         <h1 class="fw-bold text-center p-4">Retirar Dinero</h1>
 
         <form class="container vstack gap-3 col-md-5 mx-auto p-4 shadow"  action="update.php" method="post" style="background-color: rgba(0, 102, 255, 0.405);">
-            <h3 class="text-center p-1" style="font-size: 50px;">$90000.00 MXM</h3>
-            <h2 class="text-center">Saldo actual</h2>
+            <h3 class="text-center p-1" style="font-size: 40px;">Seleccione o Ingrese la cantidad a retirar</h3>
             <div class="contenedor" style=" display: flex; justify-content: center; margin-top: 10px;">
                 <button class="btn btn-success" style="margin-left: 10px">$50</button>
                 <button class="btn btn-success" style="margin-left: 10px">$100</button>

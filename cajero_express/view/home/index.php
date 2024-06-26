@@ -68,7 +68,6 @@ $nombre_completo = $nombre . " " . $ap_paterno . " " . $ap_materno;
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="btn btn-danger " href="../../connection/logut.php" aria-current="page">Cerrar Sesion
                                 <span class="visually-hidden">(current)</span></a>
                         </li>
                     </ul>
@@ -96,8 +95,14 @@ $nombre_completo = $nombre . " " . $ap_paterno . " " . $ap_materno;
                     <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
                 </svg>
             </a>
+
+            <a class="btn btn-danger m-3" href="../../connection/logut.php" aria-current="page">Cerrar Sesion <a/>
         </div>
     </main>
+
+    <footer>
+
+    </footer>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
